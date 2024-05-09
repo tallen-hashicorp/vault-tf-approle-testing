@@ -91,19 +91,29 @@ vault kv get -namespace=admin/dev -mount=kv my-secret
 ```
 
 ## Running Terraform
-Now we can test this via terraform, first copy `terraform.tfvars.example` to `terraform.tfvars`
+To test the setup using Terraform, follow these steps:
+
+First, copy the example `terraform.tfvars` file to create your own configuration file:
 
 ```bash
 cp terraform.tfvars.example terraform.tfvars
 ```
 
-now update `terraform.tfvars` to include your `role_id`, `secret_id` and `vault_url` from before. After this run terraform
+Next, update the `terraform.tfvars` file with your `role_id`, `secret_id`, and `vault_url` obtained earlier. These values are essential for authenticating with Vault.
+
+After updating the `terraform.tfvars` file, initialize the Terraform configuration and apply the changes:
+
 ```bash
 terraform init
 terraform apply
 ```
 
-the output will be masked as its a sensitvie value, you can use the follwoing if you wish to double check it exists
+Terraform will apply the configuration and create the necessary resources in Vault.
+
+As the output will contain sensitive information such as tokens, it will be masked. If you wish to verify that the output exists, you can use the following command to display the Terraform state in JSON format:
+
 ```bash
 terraform show -json
 ```
+
+This will display the Terraform state in JSON format, allowing you to confirm the creation of resources.
