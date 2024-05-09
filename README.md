@@ -7,6 +7,8 @@ This guide aims to provide a clear walkthrough for accessing secrets stored in H
 
 > * [Inject secrets into Terraform using the Vault provider](https://developer.hashicorp.com/terraform/tutorials/secrets/secrets-vault)
 > * [Terraform Cloud secrets engine](https://developer.hashicorp.com/vault/tutorials/secrets-management/terraform-secrets-engine)
+> * [Dynamic Credentials with the Vault Provider](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/dynamic-provider-credentials/vault-configuration)
+> * [Example of Dynamic credentials with Vault Provider](https://github.com/tallen-hashicorp/tfc-demo/blob/main/cloud-vcs-vault/README.md)
 
 ## Setup Vault
 Let's begin by configuring Vault. We'll utilize HCP Vault for this guide. If you haven't set up HCP Vault yet, refer to the provided guide for initial setup instructions.
