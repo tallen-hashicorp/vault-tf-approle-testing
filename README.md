@@ -1,6 +1,4 @@
-Certainly! Here are some additional clarifications and enhancements:
-
-## Introduction
+# Vault & Terraform Approle Testing
 This guide aims to provide a clear walkthrough for accessing secrets stored in HashiCorp Vault hosted on HCP (HashiCorp Cloud Platform) using Terraform. We'll establish an AppRole authentication method and create a simple Key-Value (KV) store within Vault. Then, we'll demonstrate how to retrieve a secret from this store using Terraform.
 
 > **_NOTE:_** This approach involves using a non-expiring approle `role_id` & `secret_id`. If these were exposed, a malicious entity might be able to access your secrets. I strongly recommend using an SSO system for Terraform instead of approle. To further enhance security, consider using Terraform Cloud/Terraform Enterprise to dynamically connect to Vault and inject secrets. Guides for both can be found below:
