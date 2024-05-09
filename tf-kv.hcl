@@ -7,3 +7,8 @@ path "kv/*" {
 path "kv/metadata/*" {
   capabilities = ["list"]
 }
+
+## Allow the creation of tokens
+path "auth/token/create" {
+  capabilities = ["create", "update"]
+}
