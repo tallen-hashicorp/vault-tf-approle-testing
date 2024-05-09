@@ -9,6 +9,14 @@ Let's begin by configuring Vault. We'll utilize HCP Vault for this guide. If you
 ### Setting Vault Environment
 Ensure that you have the Vault address and token handy. Set them as environment variables for easy access throughout the setup process.
 
+You can get this via the HCP UI if needed:
+
+> **_NOTE:_** It's recommended to avoid using the root token, especially in production environments. If you have a different method for accessing HCP Vault, such as another authentication method, it's advisable to use that instead of the root token. The root token should only be used for testing purposes.
+
+![URL](./docs/hcp-url.png)
+
+![Token](./docs/hcp-token.png)
+
 ```bash
 export VAULT_ADDR='https://**********:8200'
 export VAULT_TOKEN="hvs.**********"
