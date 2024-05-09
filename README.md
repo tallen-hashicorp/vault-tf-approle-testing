@@ -89,3 +89,21 @@ Now that we have obtained a token, let's utilize Terraform to retrieve the secre
 export VAULT_TOKEN="hvb.AAAAAQJ8MIwEELB3ucD61Wi8TILD******"
 vault kv get -namespace=admin/dev -mount=kv my-secret
 ```
+
+## Running Terraform
+Now we can test this via terraform, first copy `terraform.tfvars.example` to `terraform.tfvars`
+
+```bash
+cp terraform.tfvars.example terraform.tfvars
+```
+
+now update `terraform.tfvars` to include your `role_id`, `secret_id` and `vault_url` from before. After this run terraform
+```bash
+terraform init
+terraform apply
+```
+
+the output will be masked as its a sensitvie value, you can use the follwoing if you wish to double check it exists
+```bash
+terraform show -json
+```

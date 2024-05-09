@@ -1,0 +1,3 @@
+login_approle_role_id = "your_approle_role_id"
+login_approle_secret_id = "your_approle_secret_id"
+vault_url = "your_vault_url"
